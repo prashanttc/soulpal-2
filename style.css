@@ -10,13 +10,12 @@ body {
   height: 100%;
   width: 100%;
 }
-
 /* ------------------------------------cursor-------------------- */
 #cursor {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color: #95c11e;
+  background-color: #b702fe;
   position: fixed;
   z-index: 99;
 }
@@ -24,7 +23,7 @@ body {
   height: 400px;
   width: 400px;
   border-radius: 50%;
-  background-color: #96c11e41;
+  background-color: #c05ee75f;
   position: fixed;
   filter: blur(50px);
   z-index: 9;
@@ -45,9 +44,23 @@ body {
   font-weight: 500;
   font-size: small;
   text-transform: uppercase;
+  transition: all ease 0.7s;
+ 
 }
 #nav h4:hover {
   cursor: pointer;
+  scale: 1.2;
+}
+#nav a{
+  font-weight: 500;
+  font-size: small;
+  transition: all ease 0.7s;
+  text-transform: uppercase; 
+  text-decoration: none;
+}
+#nav a:hover {
+  cursor: pointer;
+  scale: 1.2;
 }
 #nav img {
   height: 50px;
@@ -77,13 +90,13 @@ video {
 }
 
 #page1 h1::before {
-  content: "EAT .DRINK .PLAY";
+  content: "LET'S MEDITATE";
   position: absolute;
   z-index: -1;
   left: -4px;
   top: -4px;
-  color: #000;
-  -webkit-text-stroke: 2px #95c11e;
+  color: #000000;
+  -webkit-text-stroke: 2px #b702fe;
 }
 #page1 h1 {
   position: relative;
@@ -134,12 +147,12 @@ video {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     margin-right: 20px;
-    -webkit-text-stroke: 2px #d9f58e;
+    -webkit-text-stroke: 2px #ffffff;
     transition: all linear 0.5s;
     text-transform: uppercase;
 }
 #scroller h4:hover {
-    color: #95c11e;
+    color: #a61ec1;
     cursor: pointer;
 }
 /*---------------keyframe----------------------------------------- */
@@ -164,9 +177,11 @@ video {
 }
 #about-us img{
   width: 15%;
-  height: 50%;
+  height: 52%;
   object-fit: cover;
-border-radius: 20px;
+}
+#about-us img:hover {
+    filter: drop-shadow(0px 0px 10px #c302fe);
 }
 #about-us-1 {
   width: 50%;
@@ -176,11 +191,13 @@ border-radius: 20px;
   font-size: 2rem;
   padding-bottom:  30px;
   font-weight: 700;
+  color: #000;
 }
 #about-us-1 p {
   font-size: 0.8rem;
   font-weight: 500;
   text-align: center;
+  color: #000;
 }
 /* -----------------------------cards------------------------------------------------ */
 #card-container {
@@ -200,46 +217,44 @@ border-radius: 20px;
   transition: all ease 0.5s;
 }
  #card1 {
-  background-image: url('assets/card1.avif');
+  background-image: url('assets/3.webp');
   background-size: cover;
   background-repeat: no-repeat;
  }
  #card2{
-  background-image: url('assets/card2.webp');
+  background-image: url('assets/1.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
  }
  #card3 {
-  background-image: url('assets/card3.avif');
+  background-image: url('assets/2.webp');
   background-size: cover;
   background-repeat: no-repeat;
  }
  .overlay {
   height: 100%;
   width: 100%;
-  background-color: #95c11e;
+  background-color: #b702fe;
 padding: 30px;
-padding-top: 30%;
+padding-top: 40%;
 opacity: 0;
 transition: all ease 0.6s;
  }
 .card:hover .overlay{
   cursor: pointer;
    opacity: 1;
- }
- .card:hover {
-  transform: rotate3d(-1, -1,0, 15deg);
+   scale: 1.1;
  }
  .overlay h4{
   font-size: 1.4rem;
-  color: #000;
+  color: #ffffff;
   font-weight: 700;
  margin-bottom: 20px;
   white-space: nowrap;
  }
  .overlay  p{
   font-size: 0.8rem;
-  color: #000;
+  color: #ffffff;
  }
  /* ------------------------------------green box--------------------------------------------- */
 #green-div {
@@ -247,7 +262,7 @@ transition: all ease 0.6s;
   height: 30vh;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to left bottom , #119F3A,#ACE022);
+  background: linear-gradient(to left bottom , #aa00ff,#ff00fb);
 }
 #green-div img {
   height: 30vh;
@@ -259,7 +274,7 @@ transition: all ease 0.6s;
   font-size: 1.2rem;
   text-align: center;
   font-weight: 900;
-  color: black;
+  color: rgb(255, 255, 255);
   line-height: 40px;
 }
 /* ---------------------------page 3--------------------------------------------------------- */
@@ -278,6 +293,7 @@ transition: all ease 0.6s;
    line-height: 45px;
    font-size: 1.3rem;
 font-weight: 900;
+color: #000;
 text-transform: uppercase;
 }
 #page3>img {
@@ -305,13 +321,17 @@ top: 20%;
 .txt {
   position: absolute;
   top: -60;
+  color: #000;
   font-size: 2rem;
   z-index: 10;
+}
+.txt h2 {
+  color: #000;
 }
 #content {
   height: 60%;
   width: 25%;
-  background-color: #95c11e;
+  background-color: #b702fe;
     border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -321,10 +341,10 @@ top: 20%;
   height: 100%;
   width: 100%;
   align-items: center;
-  background-color: #95c11e;
+  background-color: #b702fe;
   display: flex;
   justify-content: center;
-  color: black;
+  color: rgb(255, 255, 255);
   font-weight: 900;
   position: absolute;
   z-index: 10;
@@ -341,7 +361,7 @@ scale: 1.1;
 
 #content:hover h4 {
  background-color: transparent;
- color: #fff;
+ color: #ffffff;
 cursor: pointer;
 }
 #content:hover img{
@@ -351,7 +371,7 @@ cursor: pointer;
 
 #page5 {
   width: 100%;
-  background: linear-gradient(to left bottom , #119F3A,#ACE022);
+  background: linear-gradient(to top , #aa00ff,#ff00fb);
   height: 40vh;
   display: flex;
 align-items: center;
@@ -362,17 +382,43 @@ align-items: center;
 }
 #page5 img {
   position: absolute;
-  width: 20%;
+
 }
-#img1 {
+#img1 {  width: 20%;
   object-fit: cover;
   height: inherit;
 left: 0;
 }
 #img2 {
-  height: 40%;
-  width: 40%;
+  height: 80%;
+  width: 15%;
   left: 20;
+}
+#img3 {
+  height: 25%;
+  width: 15%;
+  right: 50;
+  bottom: 110;
+  scale: 1;
+  z-index: 10;
+  transition: all ease 0.8s;
+}
+#img4 {
+  transition: all ease 0.8s;
+  scale: 1;
+  height: 25%;
+  width: 15%;
+  right: 50;
+  z-index: 10;
+  bottom: 50;
+}
+#img3:hover {
+  scale: 1.03;
+  cursor: pointer;
+}
+#img4:hover {
+  scale: 1.03;
+  cursor: pointer;
 }
 #page5 p {
   width: 11%;
@@ -380,11 +426,14 @@ left: 0;
   text-align: left;
   line-height: 20px;
   margin-left: 20px;
-  color: #000;
+  color: #ffffff;
 }
 .footer1 h2{
   font-size: 1.2rem;
-  color: #000;
+  color: #ffffff;
+  z-index: 99;
   line-height: 30px;
   font-weight: 900;
+  scale: 1;
+  transition: all ease 0.6;
 }

@@ -1,5 +1,5 @@
 gsap.to("#nav", {
-    backgroundColor: "#000",
+    backgroundColor: "#fff",
     duration: 0.5,
     height: "70px",
     scrollTrigger: {
@@ -8,11 +8,19 @@ gsap.to("#nav", {
         start: "top -10%",
         end: "top -11%",
         scrub: 1
-    }
+},
+onComplete: () => {
+    // Change the text color of the h4 element to black when the animation is complete
+    gsap.set("#nav h4", { color: "#000" },gsap.set("#nav a", { color: "#000" }));
+},
+onReverseComplete: () => {
+    // Change the text color back to white when reversing the animation
+    gsap.set("#nav h4", { color: "#fff" },gsap.set("#nav a", { color: "#fff" }));
+}
 })
 
 gsap.to("#main", {
-    backgroundColor: "#000",
+    backgroundColor: "#fff ",
     scrollTrigger: {
         trigger: "#main",
         scroll: "body",
